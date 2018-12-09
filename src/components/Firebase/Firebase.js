@@ -3,12 +3,12 @@ import app from "firebase/app";
 import "firebase/auth";
 
 const config = {
-  apiKey: "AIzaSyAw-t3QJeueB3PUd5Y53PSQrYTXyLWQ73I",
-  authDomain: "chatapp-35a28.firebaseapp.com",
-  databaseURL: "https://chatapp-35a28.firebaseio.com",
-  projectId: "chatapp-35a28",
-  storageBucket: "chatapp-35a28.appspot.com",
-  messagingSenderId: "817781324849"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: ""
 };
 
 class Firebase {

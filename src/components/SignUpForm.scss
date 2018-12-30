@@ -1,0 +1,242 @@
+.SignUpForm {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.clr {
+  clear: both;
+}
+
+/* Variables & Mixins */
+$bg: #dcdde1; /* Changes Entire Color Scheme */
+$text: lighten($bg, 35%);
+
+.roundedborder {
+  border: 3px solid darken($bg, 20%);
+}
+
+/* General Layout */
+body {
+  color: #2f3640;
+  font-family: Century Gothic;
+}
+
+form {
+  font-size: 1em;
+  margin: 2em auto;
+  @extend .roundedborder;
+  padding: 2em;
+  width: 70%;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+label {
+  padding: 0 0.5em 0 0.5em;
+}
+
+/* Text Input */
+input[type="text"] {
+  @extend .roundedborder;
+  background-color: darken($bg, 50%);
+  color: lighten($text, 10%);
+  font-size: 2em;
+  margin: 0.1em 0 1em;
+  padding: 0.25em;
+  width: 50%;
+}
+input[type="password"] {
+  @extend .roundedborder;
+  background-color: darken($bg, 50%);
+  color: lighten($text, 10%);
+  font-size: 2em;
+  margin: 0.1em 0 1em;
+  padding: 0.25em;
+  width: 50%;
+}
+
+::-webkit-input-placeholder {
+  color: lighten($bg, 10%);
+}
+:-moz-placeholder {
+  color: lighten($bg, 10%);
+} /* FF 18 */
+::-moz-placeholder {
+  color: lighten($bg, 10%);
+} /* FF 19+ */
+:-ms-input-placeholder {
+  color: lighten($bg, 10%);
+}
+
+/* Radio Buttons */
+fieldset {
+  @extend .roundedborder;
+  margin-bottom: 2em;
+  padding: 0.5em 0.5em;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border: solid 0.1em lighten($bg, 7%);
+  background-color: darken($bg, 5%);
+  color: #f0f;
+  cursor: pointer;
+  height: 2.5em;
+  width: 2.5em;
+  margin-top: 0;
+  vertical-align: text-top;
+}
+
+input[type="radio"]:checked:after {
+  background-color: lighten($bg, 15%);
+  border-radius: 50%;
+  content: "\00a0";
+  display: block;
+  position: relative;
+  height: 1.5em;
+  width: 1.5em;
+  margin: 0.4em;
+}
+
+/* Dropdown Box */
+.styled-select {
+  display: inline-block;
+  @extend .roundedborder;
+  background-color: lighten($bg, 5%);
+  color: darken($bg, 10%);
+  cursor: pointer;
+  font-size: 1.1em;
+  margin-bottom: 1.5em;
+  padding: 0.25em 0;
+  position: relative;
+  width: 15em;
+}
+
+.styled-select:before {
+  font-family: "FontAwesome";
+  border: solid 1px darken($bg, 10%);
+  border-width: 0 0 0 1px;
+  content: "\f103";
+  color: darken($bg, 15%);
+  font-size: 1.25em;
+  padding-left: 0.25em;
+  position: absolute;
+  pointer-events: none;
+  right: 0.35em;
+}
+
+select {
+  appearance: none;
+  background-color: #353b48;
+  border: none;
+  cursor: pointer;
+  color: darken($bg, 100%);
+  display: inline-block;
+  font-size: 1em;
+  margin: 0;
+  padding: 0 2em 0 1em;
+  width: 100%;
+}
+
+/* Text Area */
+textarea {
+  @extend .roundedborder;
+  background-color: darken($bg, 3%);
+  color: lighten($text, 10%);
+  font-size: 1em;
+  height: 10em;
+  margin: 0.5em 0 1em;
+  padding: 1em;
+  width: 100%;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+  appearance: none;
+  @extend .roundedborder;
+  background-color: darken($bg, 15%);
+  cursor: pointer;
+  font-size: 1em;
+  padding: 0.25em;
+  height: 1em;
+  width: 1em;
+  vertical-align: text-top;
+}
+
+input[type="checkbox"]:checked:after {
+  border: solid $text;
+  border-width: 0 4px 4px 0;
+  content: "\00a0";
+  display: block;
+  height: 1em;
+  width: 0.5em;
+  margin-top: -0.9em;
+  position: relative;
+  transform: rotate(45deg);
+}
+
+/* Submit Button */
+input[type="submit"] {
+  @extend .roundedborder;
+  border: 3px solid darken($bg, 10%);
+  background-color: lighten($bg, 5%);
+  cursor: pointer;
+  color: lighten($bg, 50%);
+  float: right;
+  font-size: 1.5em;
+  padding: 0.25em 1em;
+}
+input[type="submit"]:hover {
+  background-color: darken($bg, 5%);
+}
+
+.myButton {
+  -moz-box-shadow: 3px 4px 0px 0px #276873;
+  -webkit-box-shadow: 3px 4px 0px 0px #276873;
+  box-shadow: 3px 4px 0px 0px #276873;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #599bb3),
+    color-stop(1, #408c99)
+  );
+  background: -moz-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: -webkit-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: -o-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: -ms-linear-gradient(top, #599bb3 5%, #408c99 100%);
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#599bb3', endColorstr='#408c99',GradientType=0);
+  background-color: #599bb3;
+  -moz-border-radius: 18px;
+  -webkit-border-radius: 18px;
+  border-radius: 18px;
+  border: 1px solid #29668f;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 7px 25px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+}
+.myButton:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.05, #408c99),
+    color-stop(1, #599bb3)
+  );
+  background: -moz-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: -webkit-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: -o-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: -ms-linear-gradient(top, #408c99 5%, #599bb3 100%);
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#408c99', endColorstr='#599bb3',GradientType=0);
+  background-color: #408c99;
+}

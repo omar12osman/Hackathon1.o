@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-
+import "../SignUpForm.scss";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
 import { NavLink } from "react-router-dom";
@@ -69,64 +69,43 @@ class SignUpFormBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <div className="SignUppage">
-          <div className="App__Aside" />
-          <div className="App__Form">
-            <div className="PageSwitcher">
-              <NavLink
-                to="SignIn"
-                activeClassName="PageSwitcher__Item--Active"
-                className="PageSwitcher__Item"
-              >
-                Sign In
-              </NavLink>
-              <NavLink
-                exact
-                to="SignUp"
-                activeClassName="PageSwitcher__Item--Active"
-                className="PageSwitcher__Item"
-              >
-                Sign Up
-              </NavLink>
-            </div>
-            <input
-              className="input"
-              name="username"
-              value={username}
-              onChange={this.onChange}
-              type="text"
-              placeholder="Full Name"
-            />
-            <input
-              className="input"
-              name="email"
-              value={email}
-              onChange={this.onChange}
-              type="text"
-              placeholder="Email Address"
-            />
-            <input
-              className="input"
-              name="passwordOne"
-              value={passwordOne}
-              onChange={this.onChange}
-              type="password"
-              placeholder="Password"
-            />
-            <input
-              className="input"
-              name="passwordTwo"
-              value={passwordTwo}
-              onChange={this.onChange}
-              type="password"
-              placeholder="Confirm Password"
-            />
-            <button className="button" disabled={isInvalid} type="submit">
-              Sign Up
-            </button>
-            <div className="error">{error && <p> {error.message}</p>}</div>
-          </div>
-        </div>
+        <div className="SignUppage" />
+        <input
+          className="input"
+          name="username"
+          value={username}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Full Name"
+        />
+        <input
+          className="input"
+          name="email"
+          value={email}
+          onChange={this.onChange}
+          type="text"
+          placeholder="Email Address"
+        />
+        <input
+          className="input"
+          name="passwordOne"
+          value={passwordOne}
+          onChange={this.onChange}
+          type="password"
+          placeholder="Password"
+        />
+        <input
+          className="input"
+          name="passwordTwo"
+          value={passwordTwo}
+          onChange={this.onChange}
+          type="password"
+          placeholder="Confirm Password"
+        />
+        <button className="myButton" disabled={isInvalid} type="submit">
+          Sign Up
+        </button>
+        <div className="error">{error && <p> {error.message}</p>}</div>
       </form>
     );
   }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
-import "./index.css";
+import "../SignUpForm.scss";
 import { SignUpLink, SignUpForm } from "../SignUp";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
@@ -53,53 +53,31 @@ class SignInFormBase extends Component {
 
     return (
       <form onSubmit={this.onSubmit}>
-        <div className="Signin">
-          <div className="App__Aside">
-            <div className="App__Form">
-              <div className="PageSwitcher">
-                <NavLink
-                  to="SignIn"
-                  activeClassName="PageSwitcher__Item--Active"
-                  className="PageSwitcher__Item"
-                >
-                  Sign In
-                </NavLink>
-                <NavLink
-                  exact
-                  to="SignUp"
-                  activeClassName="PageSwitcher__Item--Active"
-                  className="PageSwitcher__Item"
-                >
-                  Sign Up
-                </NavLink>
-              </div>
-              <input
-                className="input"
-                name="email"
-                value={email}
-                onChange={this.onChange}
-                type="text"
-                placeholder="Email Address"
-              />
+        <div className="SignUpForm">
+          <input
+            className="input"
+            name="email"
+            value={email}
+            onChange={this.onChange}
+            type="text"
+            placeholder="Email Address"
+          />
 
-              <input
-                className="input"
-                name="password"
-                value={password}
-                onChange={this.onChange}
-                type="password"
-                placeholder="Password"
-              />
-              <div className="button.container">
-                <button className="button" disabled={isInvalid} type="submit">
-                  Sign In
-                </button>
-              </div>
-            </div>
-          </div>
+          <input
+            className="input"
+            name="password"
+            value={password}
+            onChange={this.onChange}
+            type="password"
+            placeholder="Password"
+          />
+
+          <button className="myButton" disabled={isInvalid} type="submit">
+            Sign In
+          </button>
+
+          {error && <p>{error.message}</p>}
         </div>
-
-        {error && <p>{error.message}</p>}
       </form>
     );
   }

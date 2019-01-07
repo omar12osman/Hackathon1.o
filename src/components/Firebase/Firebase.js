@@ -3,12 +3,12 @@ import app from "firebase/app";
 import "firebase/auth";
 
 const config = {
-  apiKey: "AIzaSyBzojSPZ--ndIfDU2gFXh6arzf7-ZJ-jsQ",
-  authDomain: "my2app-f3ad0.firebaseapp.com",
-  databaseURL: "https://my2app-f3ad0.firebaseio.com",
-  projectId: "my2app-f3ad0",
-  storageBucket: "my2app-f3ad0.appspot.com",
-  messagingSenderId: "518422697342"
+  apiKey: "AIzaSyCZ332C4JorqVWCri1UpwLkGWtz9dnhtUg",
+  authDomain: "appcreation-f0f9d.firebaseapp.com",
+  databaseURL: "https://appcreation-f0f9d.firebaseio.com",
+  projectId: "appcreation-f0f9d",
+  storageBucket: "appcreation-f0f9d.appspot.com",
+  messagingSenderId: "121881559636"
 };
 
 class Firebase {

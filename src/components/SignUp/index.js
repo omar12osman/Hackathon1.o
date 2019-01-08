@@ -3,7 +3,6 @@ import { Link, withRouter } from "react-router-dom";
 import "../SignUpForm.scss";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
-import { NavLink } from "react-router-dom";
 
 const SignUpPage = () => (
   <div className="App">

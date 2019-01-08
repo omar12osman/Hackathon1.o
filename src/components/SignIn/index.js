@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import { compose } from "recompose";
 import "../SignUpForm.scss";
-import { SignUpLink, SignUpForm } from "../SignUp";
+import { SignUpLink } from "../SignUp";
 import { withFirebase } from "../Firebase";
 import * as ROUTES from "../../constants/routes";
-import { NavLink } from "react-router-dom";
-import "react-mdl/extra/material.js";
 const SignInPage = () => (
   <div>
     <SignInForm />
